@@ -1,0 +1,11 @@
+#+title: Post it Project
+
+A simple web app.
+
+* Ingredients
+
+- NextJS - A React framework for the web.
+- Tailwindcss - CSS framework.
+- Prettier - Code formatter.
+- Railway - A deployment platform.
+- Prisma - ORM database.
