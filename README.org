@@ -9,3 +9,4 @@ A simple web app.
 - Prettier - Code formatter.
 - Railway - A deployment platform.
 - Prisma - ORM database.
+- NextAuth - Authentication for NextJS.
