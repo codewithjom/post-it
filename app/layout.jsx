@@ -2,6 +2,7 @@ import './globals.css'
 import Nav from '../components/Nav'
 import { Roboto } from '@next/font/google'
 import QueryWrapper from '../components/QueryWrapper'
+import { Toaster } from 'react-hot-toast'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <body className={`${roboto.variable} mx-4 md:mx-48 xl:mx-96 bg-gray-200`}>
         <QueryWrapper>
           <Nav />
+          <Toaster />
           {children}
         </QueryWrapper>
       </body>
