@@ -10,3 +10,4 @@ A simple web app.
 - Railway - A deployment platform.
 - Prisma - ORM database.
 - NextAuth - Authentication for NextJS.
+- TanStack - React query.
