@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // get user
     const prismaUser = await prisma.user.findUnique({
       where: {
-        email: session?.user?.email
+        email: session.user?.email || ''
       }
     })
 
@@ -25,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const result = await prisma.comment.create({
         data: {
           message: title,
-          userID: prismaUser?.id,
+          userID: prismaUser?.id || '',
           postID
         }
       })

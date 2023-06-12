@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       console.log(req.query)
       const data = await prisma.post.findUnique({
         where: {
-          id: req.query.details
+          id: req.query.details as string
         },
         include: {
           user: true,

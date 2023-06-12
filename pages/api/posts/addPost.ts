@@ -10,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const title: string = req.body.title
     const prismaUser = await prisma.user.findUnique({
-      where: { email: session?.user?.email }
+      where: { email: session?.user?.email || '' }
     })
 
     // check title
@@ -26,7 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const result = await prisma.post.create({
         data: {
           title,
-          userID: prismaUser.id
+          userID: prismaUser!.id
         }
       })
       res.status(200).json(result)
